@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="blue_500">#FF00008F</color>
+    <color name="blue_700">#FF00008F</color>
+    <color name="sienna_200">#FFD24723</color>
+    <color name="sienna_700">#FFD24723</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="auto_background">#b5bac9</color>
+    <color name="auto_complement">#666f88</color>
+    <color name="auto_text_color">#464D5E</color>
+
+    <color name="damage_background">#d2bead</color>
+    <color name="damage_complement">#a68069</color>
+    <color name="damage_text_color">#615045</color>
+
+    <color name="health_background">#d1eaf9</color>
+    <color name="health_complement">#5086c1</color>
+    <color name="health_text_color">#3B638F</color>
+
+    <color name="life_background">#cfffca</color>
+    <color name="life_complement">#42ab49</color>
+    <color name="life_text_color">#296C2E</color>
+
+    <color name="icon_color">#a3a8b7</color>
+</resources>
