@@ -24,6 +24,20 @@
         android:name="mx.axa.insurance_policy_list.ui.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_policyListFragment"
+            app:destination="@id/policyListFragment"
+            app:enterAnim="@anim/enter_animation_ib"
+
+            app:popExitAnim="@anim/exit_animation_ib"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyListFragment"
+        android:name="mx.axa.insurance_policy_list.ui.fragment.PolicyListFragment"
+        android:label="fragment_policy_list"
+        tools:layout="@layout/fragment_policy_list">
     </fragment>
 
 </navigation>

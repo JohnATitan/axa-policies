@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.PolicyListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_500"
+            android:padding="@dimen/m_space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="2"
+                android:text="Hola Jonathan Jimenez Bazan"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@id/ivAvatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:text="rodrigo.rojasme.consultor@axa.com.mx"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clHeader">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_result"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_auto"
+                    android:elevation="@dimen/s_space"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/s_space"
+                    android:paddingVertical="@dimen/es_space"
+                    android:text="@string/auto"
+                    android:textColor="@color/auto_text_color"
+                    android:textSize="24sp"
+                    app:drawableEndCompat="@drawable/ic_car"
+                    app:drawableTint="@color/auto_complement" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDamage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_damage"
+                    android:elevation="@dimen/s_space"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/s_space"
+                    android:paddingVertical="@dimen/es_space"
+                    android:text="@string/damage"
+                    android:textColor="@color/damage_text_color"
+                    android:textSize="24sp"
+                    app:drawableEndCompat="@drawable/ic_damage"
+                    app:drawableTint="@color/damage_complement" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDamage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvHealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_health"
+                    android:elevation="@dimen/s_space"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/s_space"
+                    android:paddingVertical="@dimen/es_space"
+                    android:text="@string/health"
+                    android:textColor="@color/health_text_color"
+                    android:textSize="24sp"
+                    app:drawableEndCompat="@drawable/ic_health"
+                    app:drawableTint="@color/health_complement" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvLife"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_life"
+                    android:elevation="@dimen/s_space"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/s_space"
+                    android:paddingVertical="@dimen/es_space"
+                    android:text="@string/life"
+                    android:textColor="@color/life_text_color"
+                    android:textSize="24sp"
+                    app:drawableEndCompat="@drawable/ic_life"
+                    app:drawableTint="@color/life_complement" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLife"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
