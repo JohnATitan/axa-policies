@@ -38,6 +38,16 @@
         android:name="mx.axa.insurance_policy_list.ui.fragment.PolicyListFragment"
         android:label="fragment_policy_list"
         tools:layout="@layout/fragment_policy_list">
+        <action
+            android:id="@+id/action_policyListFragment_to_policyDetailFragment"
+            app:destination="@id/policyDetailFragment"
+            app:enterAnim="@anim/enter_animation_ib"
+            app:popExitAnim="@anim/exit_animation_ib" />
     </fragment>
 
+    <fragment
+        android:id="@+id/policyDetailFragment"
+        android:name="mx.axa.insurance_policy_list.ui.fragment.PolicyDetailFragment"
+        android:label="fragment_policy_detail"
+        tools:layout="@layout/fragment_policy_detail"/>
 </navigation>

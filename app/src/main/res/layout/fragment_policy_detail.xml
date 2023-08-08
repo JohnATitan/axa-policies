@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.PolicyDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivType"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="@dimen/m_space"
+            android:layout_marginTop="@dimen/m_space"
+            android:background="@drawable/background_icon"
+            android:elevation="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_health"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_space"
+            android:text="Poliza de X"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivType"
+            app:layout_constraintStart_toEndOf="@id/ivType"
+            app:layout_constraintTop_toTopOf="@id/ivType" />
+
+        <LinearLayout
+            android:id="@+id/llPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_space"
+            android:background="@drawable/background_white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivType">
+
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/details"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                android:id="@+id/dvPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:detail="@string/poliza" />
+
+            <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                android:id="@+id/dvType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:detail="@string/type" />
+
+            <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                android:id="@+id/dvInsured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:detail="@string/insured" />
+
+            <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                android:id="@+id/dvAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:detail="@string/insured_amount" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                    android:id="@+id/dvTelephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    app:detail="@string/phone" />
+
+                <ImageView
+                    android:id="@+id/ivCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:padding="@dimen/s_space"
+                    android:src="@drawable/ic_call" />
+            </RelativeLayout>
+
+
+            <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                android:id="@+id/dvCoinsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:detail="@string/coinsurance" />
+
+            <mx.axa.insurance_policy_list.ui.customviews.DetailView
+                android:id="@+id/dvDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:detail="@string/aditional_info" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_space"
+            android:text="@string/property_location"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/m_space"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llPolicy" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/m_space"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMap"
+            map:cameraZoom="10"
+            map:uiRotateGestures="true"
+            map:uiZoomControls="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
