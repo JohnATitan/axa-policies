@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Polizas</string>
+    <string name="asegurado">Asegurado</string>
+    <string name="poliza">Poliza</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="seguros">Seguros</string>
+    <string name="seguros_descripcion">Consulta tus polizas contratadas</string>
+    <string name="empty_result">No se encontraron resultados</string>
+    <string name="auto">Auto</string>
+    <string name="damage">Daños</string>
+    <string name="health">Salud</string>
+    <string name="life">Vida</string>
+    <string name="property_location">Ubicación de inmueble</string>
+    <string name="details">Detalles</string>
+    <string name="type">Tipo</string>
+    <string name="insured">Asegurado</string>
+    <string name="insured_amount">Cantidad asegurada</string>
+    <string name="phone">Telefono</string>
+    <string name="coinsurance">Coaseguro</string>
+    <string name="aditional_info">Informacion adicional</string>
+</resources>
